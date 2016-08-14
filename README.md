@@ -1,1 +1,3 @@
 # leetcode
+
+my coding practises
