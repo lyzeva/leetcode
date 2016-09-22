@@ -26,9 +26,9 @@ int main(){
 			if(j == i)
 				break;
 			pairs[i][j] = true;
-			printf("%d ",array[j]);
 			if(pairs[j][i]){
 				pairnum ++;	
+				printf("%d ",array[j]);
 			}
 		}while(array[j]<array[i]);
 		j = indexOf(i+1, length);
@@ -36,10 +36,10 @@ int main(){
 			j = i;
 			do{
 				j = indexOf(j+1,length);
-				printf("%d ",array[j]);
 				pairs[i][j] = true;
 				if(pairs[j][i]){
 					pairnum ++;	
+					printf("%d ",array[j]);
 				}
 			}while(array[j]<array[i]);
 		}
@@ -57,6 +57,21 @@ int indexOf(int i,int length){
 	else
 		return i;
 }
-
-//1 3 4
-// 5 2
+/*
+8
+7 3 4 2 8 5 6 1
+7 3
+7 4
+7 8
+3 4
+4 2
+4 8
+2 8
+8 5
+8 6
+5 6
+6 1
+6 7
+1 7
+ 
+*/
